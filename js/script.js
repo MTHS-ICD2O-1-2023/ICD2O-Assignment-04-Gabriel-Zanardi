@@ -40,5 +40,7 @@ const totalCost = baseCost + (toppingPrices[selectedToppings] || 0); // Using th
 const totalCostWithTax = totalCost * (1 + TAX_RATE);
 
 // Display or use the total cost with tax as needed
-document.getElementById("answer").innerHTML = ("Total Cost with Tax: $" + totalCostWithTax.toFixed(2));
+document.getElementById("answer").innerHTML = ("Total Cost without Tax: $" + totalCost.toFixed(2));
+document.getElementById("government-tax").innerHTML = ("Total Cost with Tax: $" + totalCostWithTax.toFixed(2));
+
 }
