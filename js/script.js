@@ -8,13 +8,12 @@
 
 function myButtonClicked() {
 // Constants for pizza sizes and their costs
-const EXTRA_LARGE_COST = 10.00;
-const LARGE_COST = 6.00;
+const extraLargePizza = 10.00;
+const largePizza = 6.00;
 const TAX_RATE = 0.18; // 13% tax rate
 
 // Retrieve selected pizza size
 const pizzaSizeInput = document.getElementById("pizza-size");
-const selectedPizzaSize = parseFloat(pizzaSizeInput.value); // Parse the value as a float
 
 // Get the selected number of toppings
 const selectedToppings = parseInt(document.querySelector('input[name="options"]:checked').value);
@@ -29,10 +28,10 @@ const toppingPrices = {
 
 // Calculate the base cost based on the selected pizza size
 let baseCost;
-if (selectedPizzaSize === EXTRA_LARGE_COST) {
-    baseCost = EXTRA_LARGE_COST;
-} else if (selectedPizzaSize === LARGE_COST) {
-    baseCost = LARGE_COST;
+if (pizzaSizeInput === extraLargePizza) {
+    baseCost = extraLargePizza;
+} else if (pizzaSizeInput === largePizza) {
+    baseCost = largePizza;
 }
 
 // Calculate the total cost including toppings and tax
