@@ -39,11 +39,18 @@
 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
 <!-- Simple Textfield -->
 <form action="#">
-  <div class="mdl-textfield mdl-js-textfield">
-    <input class="mdl-textfield__input" type="text" id="pizza-size">
-    <label class="mdl-textfield__label" for="sample1">Input your pizza size here</label>
-  </div>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+  <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+  <span class="mdl-radio__label">Large Pizza</span>
+  <br />
+</label>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+  <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+  <span class="mdl-radio__label">Extra Large Pizza</span>
+</label>
 </form>
+<br />
+<br />
 <p>Large Pizza - $6.00</p>
 <p>Extra Large Pizza - $10.00</p>
 
