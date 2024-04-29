@@ -10,7 +10,7 @@ function myButtonClicked() {
 // Constants for pizza sizes and their costs
 const EXTRA_LARGE_COST = 10.00;
 const LARGE_COST = 6.00;
-const TAX_RATE = 0.13; // 13% tax rate
+const TAX_RATE = 0.18; // 13% tax rate
 
 // Retrieve selected pizza size
 const pizzaSizeInput = document.getElementById("pizza-size");
@@ -40,5 +40,5 @@ const totalCost = baseCost + (toppingPrices[selectedToppings] || 0); // Using th
 const totalCostWithTax = totalCost * (1 + TAX_RATE);
 
 // Display or use the total cost with tax as needed
-console.log("Total Cost with Tax: $" + totalCostWithTax.toFixed(2));
+document.getElementById("answer").innerHTML = ("Total Cost with Tax: $" + totalCostWithTax.toFixed(2));
 }
