@@ -35,15 +35,16 @@
       <br />
       <!-- Simple Textfield for integers-->
       <form action="#">
-    <div class="mdl-textfield mdl-js-textfield getmdl-select">
-      <input type="text" value="" class="mdl-textfield__input" id="pizza-size" readonly>
-      <input type="hidden" value="" name="sample1">
-      <label for="sample1" class="mdl-textfield__label">Pizza size:</label>
-      <ul for="sample1" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-        <li class="mdl-menu__item" data-val="DEU">Extra Large Pizza  $10.00</li>
-        <li class="mdl-menu__item" data-val="BLR">Large Pizza  $6.0</li>
-      </ul>
-    </div>
+<!-- Custom Select Menu -->
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+  <input type="text" value="" class="mdl-textfield__input" id="pizza-size" readonly>
+  <input type="hidden" value="" name="pizza-size">
+  <label class="mdl-textfield__label" for="pizza-size">Pizza size:</label>
+  <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="pizza-size">
+    <li class="mdl-menu__item" data-val="10.00">Extra Large Pizza $10.00</li>
+    <li class="mdl-menu__item" data-val="6.00">Large Pizza $6.00</li>
+  </ul>
+</div>
       </form>
       <br />
       <br />
