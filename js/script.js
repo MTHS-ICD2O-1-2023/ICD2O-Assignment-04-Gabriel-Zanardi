@@ -10,7 +10,7 @@ function myButtonClicked() {
   // process
 let totalCost;
 
-if (pizzaSize == "extra large") {
+if (pizzaSize.toUpperCase() == "EXTRA LARGE") {
   totalCost = 10.00;
   
   if (numberToppings == "1") {
@@ -25,7 +25,7 @@ if (pizzaSize == "extra large") {
 } else if (pizzaSize == "large") {
   totalCost = 6.00;
   
-  if (numberToppings == "1") {
+  if (numberToppings.toUpperCase()  == "1") {
     totalCost += 1.00;
   } else if (numberToppings == "2") {
     totalCost += 1.75;
