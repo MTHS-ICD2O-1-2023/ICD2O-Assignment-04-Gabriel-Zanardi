@@ -1,6 +1,6 @@
 "use strict";
 
-function salaryIncome() {
+function myButtonClicked() {
   const TAX_RATE = 0.18;
 
   // input
@@ -23,6 +23,7 @@ function salaryIncome() {
       totalCost += 3.35;
     }
   else if (pizzaSize == "large") {
+    totalCost = 6.00
     if (numberToppings == "1") {
       totalCost += 1.00;
     } else if (numberToppings == "2") {
@@ -35,7 +36,7 @@ function salaryIncome() {
   }
 }
 
-  const noTaxCost = totalCost + 1 * TAX_RATE;
+  const noTaxCost = totalCost;
 
   // output
   document.getElementById("cost-no-tax").innerHTML =
