@@ -6,40 +6,22 @@
 
 "use strict"
 
-function myButtonClicked() {
-// Constants for pizza sizes and their costs
-const extraLargePizza = 10.00;
-const largePizza = 6.00;
-const TAX_RATE = 0.18; // 13% tax rate
+function salaryIncome() {
+  const TAX_RATE = 0.18
 
-// Retrieve selected pizza size
-const pizzaSizeInput = document.getElementById("pizza-size");
+  // input
+  const hoursWorked = document.getElementById("hours-worked").value
+  const hourlyRate = document.getElementById("hourly-rate").value
 
-// Get the selected number of toppings
-const selectedToppings = parseInt(document.querySelector('input[name="options"]:checked').value);
+  // process
+  const pay = (hoursWorked * hourlyRate) * (1.00 - TAX_RATE)
+  const roundedAnswer = pay.toFixed(2)
+  const payTwo = (hoursWorked * hourlyRate) * TAX_RATE
+  const roundedAnswerTwo = payTwo.toFixed(2)
 
-// Define the prices for each topping
-const toppingPrices = {
-    1: 1.00,
-    2: 1.75,
-    3: 2.50,
-    4: 3.35
-};
-
-// Calculate the base cost based on the selected pizza size
-let baseCost;
-if (pizzaSizeInput === extraLargePizza) {
-    baseCost = extraLargePizza;
-} else if (pizzaSizeInput === largePizza) {
-    baseCost = largePizza;
-}
-
-// Calculate the total cost including toppings and tax
-const totalCost = baseCost + (toppingPrices[selectedToppings] || 0); // Using the selected number of toppings to retrieve its price from the toppingPrices object
-const totalCostWithTax = totalCost * (1 + TAX_RATE);
-
-// Display or use the total cost with tax as needed
-document.getElementById("answer").innerHTML = ("Total Cost without Tax: $" + totalCost.toFixed(2));
-document.getElementById("government-tax").innerHTML = ("Total Cost with Tax: $" + totalCostWithTax.toFixed(2));
-
+  // output
+  document.getElementById("income-salary").innerHTML =
+    "your pay is: CAD$" + roundedAnswer 
+    document.getElementById("government-tax").innerHTML = 
+    "the government will take: CAD$" + roundedAnswerTwo
 }
