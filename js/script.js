@@ -22,7 +22,18 @@ function salaryIncome() {
     } else if (numberToppings == "4") {
       totalCost += 3.35;
     }
+  else if (pizzaSize == "large") {
+    if (numberToppings == "1") {
+      totalCost += 1.00;
+    } else if (numberToppings == "2") {
+      totalCost += 1.75;
+    } else if (numberToppings == "3") {
+      totalCost += 2.50;
+    } else if (numberToppings == "4") {
+      totalCost += 3.35;
+    }
   }
+}
 
   const noTaxCost = totalCost + 1 * TAX_RATE;
 
