@@ -7,21 +7,34 @@
 "use strict"
 
 function salaryIncome() {
-  const TAX_RATE = 0.18
+  const TAX_RATE = 0.18;
 
   // input
-  const hoursWorked = document.getElementById("hours-worked").value
-  const hourlyRate = document.getElementById("hourly-rate").value
+  const pizzaSize = document.getElementById("pizza-size").value;
+  const numberToppings = document.getElementById("number-toppings").value;
 
   // process
-  const pay = (hoursWorked * hourlyRate) * (1.00 - TAX_RATE)
-  const roundedAnswer = pay.toFixed(2)
-  const payTwo = (hoursWorked * hourlyRate) * TAX_RATE
-  const roundedAnswerTwo = payTwo.toFixed(2)
+let totalCost;
 
-  // output
-  document.getElementById("income-salary").innerHTML =
-    "your pay is: CAD$" + roundedAnswer 
-    document.getElementById("government-tax").innerHTML = 
-    "the government will take: CAD$" + roundedAnswerTwo
+if (pizzaSize == "extra large") {
+  totalCost = 10.00;
+  
+  if (numberToppings == "1") {
+    totalCost =+ 1.00;
+  } else if (numberToppings == "2") {
+    totalCost =+ 1.75;
+  }
+    else if (numberToppings == "3") {
+        totalcost =+ 2.50;
+  }
+    else (numberToppings == "4") {
+        totalcost =+ 3.35;
+  }
+  }
+
+const finalAnswer = totalCost + totalCost * TAX_RATE;
+
+// output
+document.getElementById("cost-no-tax").innerHTML =
+  "your pay is: CAD$" + finalAnswer 
 }
