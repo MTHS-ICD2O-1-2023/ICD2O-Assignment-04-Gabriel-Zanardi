@@ -27,38 +27,39 @@
     </header>
     <main class="mdl-layout__content">
       <div class="right-image">
-        <img src="./images/income_tax.jpg" alt="income tax image" />
+        <img src="./images/Marco's-Pizza.png" alt="Marco's Pizza Logo'" />
       </div>
       <div class="page-content">
         Please enter your employment information
       </div>
       <br />
-      <!-- Simple Textfield for integers-->
-      <form action="#">
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="hours-worked">
-          <label class="mdl-textfield__label" for="age-entered">hours worked: </label>
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-      </form>
+<!-- Simple Textfield -->
+<form action="#">
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" id="pizza-size">
+    <label class="mdl-textfield__label" for="pizza-size">Pizza size</label>
+  </div>
+</form>
+
       <br />
       <form action="#">
         <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="hourly-rate">
-          <label class="mdl-textfield__label" for="age-entered">hourly rate: </label>
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="number-toppings">
+          <label class="mdl-textfield__label" for="number-toppings">number of toppings </label>
           <span class="mdl-textfield__error">Input is not a number!</span>
         </div>
       </form>
       <!-- Accent-colored raised button with ripple -->
       <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-        onclick="salaryIncome()">
+        onclick="myButtonClicked()">
         Calculate
       </button>
       <br />
       <br />
       <div class="page-content-answer">
-        <div id="income-salary"></div>
+        <div id="cost-no-tax"></div>
         <div id="government-tax"></div>
+        <div id="total-amount"></div>
       </div>
     </main>
   </div>
