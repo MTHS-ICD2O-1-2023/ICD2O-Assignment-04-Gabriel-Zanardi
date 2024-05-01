@@ -22,10 +22,10 @@ if (pizzaSize.toUpperCase() == "EXTRA LARGE") {
   } else if (numberToppings == "4") {
     totalCost += 3.35;
   }
-} else if (pizzaSize == "large") {
+} else if (pizzaSize.toUpperCase() == "LARGE") {
   totalCost = 6.00;
   
-  if (numberToppings.toUpperCase()  == "1") {
+  if (numberToppings  == "1") {
     totalCost += 1.00;
   } else if (numberToppings == "2") {
     totalCost += 1.75;
