@@ -1,7 +1,7 @@
 "use strict";
 
 function myButtonClicked() {
-  const TAX_RATE = 0.18;
+  const HST_RATE = 0.13;
 
   // input
   const pizzaSize = document.getElementById("pizza-size").value;
@@ -36,8 +36,8 @@ if (pizzaSize.toUpperCase() == "EXTRA LARGE") {
   }
 }
 
- const noTaxCost = (totalCost * (1.00 - TAX_RATE)).toFixed(2);
-  const governmentTax = (totalCost * TAX_RATE).toFixed(2);
+ const noTaxCost = totalCost.toFixed(2);
+  const governmentTax = (totalCost * HST_RATE).toFixed(2);
   const totalAmount = (parseFloat(governmentTax) + parseFloat(noTaxCost)).toFixed(2);
 
 // Output
