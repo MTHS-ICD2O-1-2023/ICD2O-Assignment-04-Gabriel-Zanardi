@@ -1,42 +1,42 @@
-"use strict";
+"use strict"
 
 function myButtonClicked() {
-  const HST_RATE = 0.13;
+  const HST_RATE = 0.13
 
   // input
-  const pizzaSize = document.getElementById("pizza-size").value;
-  const numberToppings = document.getElementById("number-toppings").value;
+  const pizzaSize = document.getElementById("pizza-size").value
+  const numberToppings = document.getElementById("number-toppings").value
 
   // process
-let totalCost;
+let totalCost
 
 if (pizzaSize.toUpperCase() == "EXTRA LARGE") {
-  totalCost = 10.00;
+  totalCost = 10.00
   
   if (numberToppings == "1") {
-    totalCost += 1.00;
+    totalCost += 1.00
   } else if (numberToppings == "2") {
-    totalCost += 1.75;
+    totalCost += 1.75
   } else if (numberToppings == "3") {
-    totalCost += 2.50;
+    totalCost += 2.50
   } else if (numberToppings == "4") {
-    totalCost += 3.35;
+    totalCost += 3.35
   }
-} else if (pizzaSize.toUpperCase() == "LARGE") {
-  totalCost = 6.00;
+} else {
+  totalCost = 6.00
   
   if (numberToppings  == "1") {
-    totalCost += 1.00;
+    totalCost += 1.00
   } else if (numberToppings == "2") {
-    totalCost += 1.75;
+    totalCost += 1.75
   } else if (numberToppings == "3") {
-    totalCost += 2.50;
+    totalCost += 2.50
   } else if (numberToppings == "4") {
-    totalCost += 3.35;
+    totalCost += 3.35
   }
 }
 
- const noTaxCost = totalCost.toFixed(2);
+  const noTaxCost = totalCost.toFixed(2);
   const governmentTax = (totalCost * HST_RATE).toFixed(2);
   const totalAmount = (parseFloat(governmentTax) + parseFloat(noTaxCost)).toFixed(2);
 
